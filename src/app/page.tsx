@@ -85,7 +85,7 @@ export default function Home() {
         </div>
         <div className="bg-white w-10/12 mx-auto px-4 py-3 mt-2 items-center justify-center flex shadow-lg rounded-lg flex-col ">
           <input
-            className="border-b-2 transition border-b-purple-400 focus:outline-none focus:border-b-purple-800 rounded-sm w-5/6 "
+            className="border-b-2 transition border-b-purple-400 focus:outline-none focus:border-b-purple-800 rounded-sm w-5/6 text-black"
             value={inputValue} placeholder="Oque deseja adicionar?"
             onChange={handleChangeInput}
           />
@@ -103,7 +103,7 @@ export default function Home() {
                 <div className="flex-shrink-0 items-center flex">
                   <input
                     type="checkbox" checked={item.done}
-                    onChange={() => handleDoneCheckbox(item.id)}
+                    onChange={() => handleDoneCheckbox(key)}
                     className="w-5 h-5 cursor-pointer"
                   />
                 </div>
@@ -125,9 +125,10 @@ export default function Home() {
             <div className="absolute inset-0 bg-black opacity-50"></div>
             <div className="z-10 bg-white p-4 max-w-md rounded shadow-lg flex flex-col items-center">
               <input
-                className="border-b-2 transition w-72 border-b-purple-400 focus:outline-none focus:border-b-purple-800 rounded-sm"
+                className="border-b-2 transition w-72 border-b-purple-400 focus:outline-none focus:border-b-purple-800 rounded-sm text-black"
                 value={editInput}
                 onChange={handleInputModal}
+                placeholder="Digite a nova mensagem"
               />
               <div className="flex justify-between items-center mt-4">
                 <button
